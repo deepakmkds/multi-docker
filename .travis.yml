@@ -15,9 +15,9 @@ after_success:
   - docker build -t deepakm1691/multi-nginx ./nginx
   - docker build -t deepakm1691/multi-worker ./worker
   # Log into Docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
   - echo $DOCKER_PASSWORD
   - echo $DOCKER_ID
+  - echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
   # Take those images and push it innto the dockerhub
   - docker push deepakm1691/multi-client
   - docker push deepakm1691/multi-server
