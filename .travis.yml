@@ -11,7 +11,7 @@ scripts:
 
 after_success:
   - docker build -t deepakm1691/multi-client ./client
-  - docker build -t deepakm1691/multi-server ./multi-server
+  - docker build -t deepakm1691/multi-server ./server
   - docker build -t deepakm1691/multi-nginx ./nginx
   - docker build -t deepakm1691/multi-worker ./worker
   # Log into Docker CLI
